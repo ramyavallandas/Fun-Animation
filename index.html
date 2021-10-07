@@ -1,12 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ramya Vallandas</title>
-</head>
-<body>
-    <h1>Hello World!</h1>
-</body>
+  </head>
+  <body>
+      <script>
+          window.onload=()=>{
+              console.log('Loaded')
+              setInterval(()=>{
+          document.querySelectorAll('.ray-item')
+          .forEach(i=>{
+            i.style.cssText=`
+              background: linear-gradient(${Math.random()*360}deg, #${Math.floor(Math.random()*16777215).toString(16)}, #${Math.floor(Math.random()*16777215).toString(16)});
+              transform: rotate3d(${Math.random()*100}, ${Math.random()*100}, ${Math.random()*100}, ${Math.random()*360}deg);
+              opacity:${Math.random()};
+              width:${10+Math.random()*150}px;
+              height:${10+Math.random()*150}px;
+              top:${Math.random()*100}vh;
+              left:${Math.random()*100}vw;
+             
+            `
+          })
+        
+          console.log('working')
+              },200)
+          }
+      </script>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+        }
+      .con {
+          display:flex;
+          flex-wrap: wrap;
+          justify-content: space-around;
+      }
+      .con .ray-item{
+          width:100px;
+          height:100px;
+          background: linear-gradient(45deg, #d53636, #6881f9);
+          margin:10px;
+          transition: all 0.1s;
+          animation: lolli 1.5s ;
+          position:fixed;
+      }
+      @keyframes lolli {
+        from{
+          transform: scale3d(1,1,1);
+          
+        }
+        50%{
+        
+          transform: rotate3d(2, 4, 1, 278deg);
+        }
+        to{
+          transform: scale3d(1,1,1);
+        }
+      }
+    </style>
+    <div class="con">
+        <div class="ray-item"></div>
+        <div class="ray-item"></div>
+        <div class="ray-item"></div>
+        <div class="ray-item"></div>
+        <div class="ray-item"></div>
+        <div class="ray-item"></div>
+        <div class="ray-item"></div>
+        <div class="ray-item"></div>
+        <div class="ray-item"></div>
+        <div class="ray-item"></div>
+        <div class="ray-item"></div>
+        <div class="ray-item"></div>
+        <div class="ray-item"></div>
+        <div class="ray-item"></div>
+        <div class="ray-item"></div>
+        <div class="ray-item"></div>
+        <div class="ray-item"></div>
+        <div class="ray-item"></div>
+        <div class="ray-item"></div>
+        <div class="ray-item"></div>
+        <div class="ray-item"></div>
+        <div class="ray-item"></div>
+        <div class="ray-item"></div>
+        <div class="ray-item"></div>
+        <div class="ray-item"></div>
+        <div class="ray-item"></div>
+        <div class="ray-item"></div>
+        <div class="ray-item"></div>
+        <div class="ray-item"></div>
+        <div class="ray-item"></div>
+        <div class="ray-item"></div>
+        <div class="ray-item"></div>
+        <div class="ray-item"></div>
+        <div class="ray-item"></div>
+        <div class="ray-item"></div>
+        <div class="ray-item"></div>
+        <div class="ray-item"></div>
+        <div class="ray-item"></div>
+        <div class="ray-item"></div>
+        <div class="ray-item"></div>
+        <div class="ray-item"></div>
+    </div>
+  </body>
 </html>
